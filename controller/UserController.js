@@ -18,9 +18,11 @@ const UserController = {
       list: result,
     })
   },
-  // saveUserData: (req, res) => {
-  //   res.send({ status: true, status: 'Working' })
-  // },
+  saveUserData: (req, res) => {
+    // client info will be sent to server
+
+    res.send({ status: true, message: 'Working' })
+  },
 }
 
 module.exports = UserController

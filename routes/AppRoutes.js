@@ -6,5 +6,6 @@ AppRouter.get('/', UserController.userHome)
 
 AppRouter.get('/get-user-list/:gender', UserController.getUserList)
 
-// AppRouter.post('/save-user-data', UserController.getUserData)
+AppRouter.post('/save-user-data', UserController.saveUserData)
+
 module.exports = AppRouter
