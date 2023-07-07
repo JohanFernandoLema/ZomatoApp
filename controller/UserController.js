@@ -21,6 +21,14 @@ const UserController = {
   saveUserData: (req, res) => {
     // client info will be sent to server
     let user = req.body
+    let saveData = {
+      f_name: user.f_name,
+      l_name: user.l_name,
+      gender: user.gender,
+      email: user.email,
+      mobile: user.mobile,
+      password: user.password,
+    }
     res.send({ status: true, data_obtained: user })
   },
 }
