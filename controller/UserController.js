@@ -20,8 +20,8 @@ const UserController = {
   },
   saveUserData: (req, res) => {
     // client info will be sent to server
-
-    res.send({ status: true, message: 'Working' })
+    let user = req.body
+    res.send({ status: true, data_obtained: user })
   },
 }
 

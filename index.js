@@ -8,6 +8,11 @@ const mongoose = require('mongoose')
 const AppRouter = require('./routes/AppRoutes')
 const PORT = 3000
 
+// body parser
+app.use(express.json()) //allow to raw data
+app.use(express.urlencoded({ extended: false })) //able form data
+
+// adding routes
 app.use('/api', AppRouter)
 // AppRouter.get('/get-user-list',)
 
