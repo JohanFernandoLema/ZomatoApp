@@ -7,7 +7,7 @@ AppRouter.get('/', UserController.userHome)
 
 AppRouter.get('/get-user-list/:gender', UserController.getUserList)
 
-AppRouter.get('/get-location', LocationController.getLocationList)
+// AppRouter.get('/get-location-list', LocationController.getLocationList)
 
 AppRouter.post('/save-user-data', UserController.saveUserData)
 AppRouter.post('/login', UserController.userLogin)
