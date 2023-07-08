@@ -35,7 +35,16 @@ const UserController = {
     res.send({ status: true, result })
   },
   userLogin: async (req, res) => {
-    res.send({ status: true, message: 'Enter your data' })
+    let { username, password } = req.body
+    let isDataValid = await UserModel.findOne({
+      email: username,
+      password: password,
+    })
+    if (isDataValid) {
+      res.send({ status: true, user: isDataValid })
+    } else {
+      res.send({ status: false })
+    }
   },
 }
 
