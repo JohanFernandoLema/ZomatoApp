@@ -8,4 +8,6 @@ AppRouter.get('/get-user-list/:gender', UserController.getUserList)
 
 AppRouter.post('/save-user-data', UserController.saveUserData)
 
+AppRouter.post('/login', UserController.userLogin)
+
 module.exports = AppRouter

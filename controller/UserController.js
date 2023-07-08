@@ -18,7 +18,7 @@ const UserController = {
       list: result,
     })
   },
-  saveUserData: (req, res) => {
+  saveUserData: async (req, res) => {
     // client info will be sent to server
     let user = req.body
     let saveData = {
@@ -29,7 +29,13 @@ const UserController = {
       mobile: user.mobile,
       password: user.password,
     }
-    res.send({ status: true, data_obtained: user })
+    // use insert one to add our data inside the db file
+    let newUser = new UserModel(saveData)
+    let result = await newUser.save()
+    res.send({ status: true, result })
+  },
+  userLogin: async (req, res) => {
+    res.send({ status: true, message: 'Enter your data' })
   },
 }
 
