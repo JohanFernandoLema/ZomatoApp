@@ -34,12 +34,16 @@ const UserController = {
     let result = await newUser.save()
     res.send({ status: true, result })
   },
+  // every time we use promise methods with mongo we have to use async and await.
   userLogin: async (req, res) => {
     let { username, password } = req.body
-    let isDataValid = await UserModel.findOne({
-      email: username,
-      password: password,
-    })
+    let isDataValid = await UserModel.findOne(
+      {
+        email: username,
+        password: password,
+      },
+      { password: 0 }
+    )
     if (isDataValid) {
       res.send({ status: true, user: isDataValid })
     } else {
