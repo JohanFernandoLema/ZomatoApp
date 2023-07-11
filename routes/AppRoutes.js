@@ -15,6 +15,10 @@ AppRouter.get(
   '/get-location-by-loc/:loc_id',
   RestaurantController.getRestaurantListByLoc
 )
+AppRouter.get(
+  '/get-restaurant-details/:rest_id',
+  RestaurantController.getSingleRestaurantDetails
+)
 
 AppRouter.get('/get-meal-type-list', MealTypeController.getMealType)
 

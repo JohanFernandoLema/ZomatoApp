@@ -10,6 +10,11 @@ const RestaurantController = {
     )
     res.send({ status: true, result })
   },
+  getSingleRestaurantDetails: async (req, res) => {
+    let { rest_id } = req.params
+    let result = await RestaurantModel.findOne({ _id: rest_id })
+    res.send({ status: true, result })
+  },
 }
 
 module.exports = RestaurantController
