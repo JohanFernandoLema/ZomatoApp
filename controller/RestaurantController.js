@@ -1,4 +1,3 @@
-const LocationModel = require('../model/LocationModel')
 const RestaurantModel = require('../model/RestaurantModel')
 
 const RestaurantController = {
@@ -11,10 +10,6 @@ const RestaurantController = {
     )
     res.send({ status: true, result })
   },
-  // getSingleRestaurantDetail: async (req, res) => {
-  //   let result = await RestaurantModel.findOne()
-  //   res.send({ status: true, result })
-  // },
 }
 
 module.exports = RestaurantController

@@ -6,5 +6,5 @@ const MealTypeSchema = new mongoose.Schema({
   image: { type: String },
 })
 
-const MealTypeModel = mongoose.model('mealtype', MealTypeSchema, 'mealtypes')
+const MealTypeModel = mongoose.model('mealtype', MealTypeSchema, 'mealTypes')
 module.exports = MealTypeModel

@@ -16,7 +16,7 @@ AppRouter.get(
   RestaurantController.getRestaurantListByLoc
 )
 
-AppRouter.get('/get/meal-type-list', MealTypeController.getMealType)
+AppRouter.get('/get-meal-type-list', MealTypeController.getMealType)
 
 AppRouter.post('/save-user-data', UserController.saveUserData)
 AppRouter.post('/login', UserController.userLogin)
