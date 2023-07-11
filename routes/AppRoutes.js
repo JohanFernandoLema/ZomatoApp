@@ -4,6 +4,7 @@ const UserController = require('../controller/UserController')
 
 const LocationController = require('../controller/LocationController')
 const RestaurantController = require('../controller/RestaurantController')
+const MealTypeController = require('../controller/MealTypeController')
 
 AppRouter.get('/', UserController.userHome)
 
@@ -14,6 +15,8 @@ AppRouter.get(
   '/get-location-by-loc/:loc_id',
   RestaurantController.getRestaurantListByLoc
 )
+
+AppRouter.get('/get/meal-type-list', MealTypeController.getMealType)
 
 AppRouter.post('/save-user-data', UserController.saveUserData)
 AppRouter.post('/login', UserController.userLogin)
