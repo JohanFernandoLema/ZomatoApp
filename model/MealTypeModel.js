@@ -7,4 +7,4 @@ const MealTypeSchema = new mongoose.Schema({
 })
 
 const MealTypeModel = mongoose.model('mealtype', MealTypeSchema, 'mealtypes')
-module.exports = LocationModel
+module.exports = MealTypeModel
