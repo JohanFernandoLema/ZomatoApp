@@ -25,4 +25,6 @@ AppRouter.get('/get-meal-type-list', MealTypeController.getMealType)
 AppRouter.post('/save-user-data', UserController.saveUserData)
 AppRouter.post('/login', UserController.userLogin)
 
+AppRouter.post('/filter', RestaurantController.filter)
+
 module.exports = AppRouter
