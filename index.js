@@ -6,7 +6,7 @@ const app = express()
 const mongoose = require('mongoose')
 
 const AppRouter = require('./routes/AppRoutes')
-const PORT = 3000
+const PORT = 3300
 
 // body parser
 app.use(express.json()) //allow to raw data
