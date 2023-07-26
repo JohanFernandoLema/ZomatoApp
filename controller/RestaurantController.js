@@ -7,7 +7,7 @@ const RestaurantController = {
     let result = await RestaurantModel.find(
       { location_id: loc_id },
       //Sort elements to be found only by the below mentioned parameters
-      { name: 1, locality: 1, image: 1, city: 1 }
+      { name: 1, locality: 1, image: 1, city: 1, location_id: 1 }
     )
     res.send({ status: true, result })
   },
